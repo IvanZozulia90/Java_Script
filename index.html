@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця зі стилями</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f1f8fb;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 800px; /* Збільшимо максимальну ширину таблиці */
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background-color: #1a6bb9;
+            color: white;
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 20px; /* Збільшимо відступи від тексту до рамки */
+            white-space: nowrap; /* Забороняємо перенесення тексту */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Пріорітет</th>
+        <th>Оператор</th>
+        <th>Асоціативність</th>
+        <th>Приклад</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>20</td>
+        <td>Групування (...)</td>
+        <td>-</td>
+        <td>(2 + 3) * 4</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>Постфіксний інкремент ..++</td>
+        <td>-</td>
+        <td>let a = 5; a++;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Постфіксний декремент ..--</td>
+        <td>-</td>
+        <td>let b = 8; b--;</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>Логічне заперечення !...</td>
+        <td>З права наліво</td>
+        <td>let x = true; let y = !x;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Унарний плюс +...</td>
+        <td></td>
+        <td>let num = "5"; let result = +num;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Унарний мінус -...</td>
+        <td></td>
+        <td>let num = "10"; let result = -num;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Префіксний інкремент ++...</td>
+        <td></td>
+        <td>let c = 3; let d = ++c;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Префіксний декремент --...</td>
+        <td></td>
+        <td>let e = 6; let f = --e;</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>Зведення в ступінь **</td>
+        <td>З права наліво</td>
+        <td>let base = 2; let exponent = 3; let result = base ** exponent;</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>Множення *</td>
+        <td>З ліва направо</td>
+        <td>let product = 4 * 5;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Поділ /</td>
+        <td></td>
+        <td>let quotient = 10 / 2;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Взяття залишку %</td>
+        <td></td>
+        <td>let remainder = 15 % 4;</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>Додавання +</td>
+        <td>З ліва на право</td>
+        <td>let sum = 7 + 8;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Віднімання -</td>
+        <td></td>
+        <td>let difference = 20 - 5;</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Менше <</td>
+        <td>З ліва направо</td>
+        <td>let lessThan = 3 < 7;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Менше або дорівнює <=</td>
+        <td></td>
+        <td>let lessThanOrEqual = 5 <= 5;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Більше ></td>
+        <td></td>
+        <td>let greaterThan = 10 > 7;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Більше або дорівнює >=</td>
+        <td></td>
+        <td>let greaterThanOrEqual = 12 >= 12;</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Дорівнює ==</td>
+        <td></td>
+        <td>let isEqual = "5" == 5;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Не дорівнює !=</td>
+        <td></td>
+        <td>let isNotEqual = 10 != 7;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Строга рівність ===</td>
+        <td></td>
+        <td>let isStrictEqual = "5" === 5;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Строга не рівність !==</td>
+        <td></td>
+        <td>let isNotStrictEqual = "5" !== 5;</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Логічне &&</td>
+        <td>З ліва направо</td>
+        <td>let result = true && false;</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Логічне або ||</td>
+        <td>З ліва направо</td>
+        <td>let result = true || false;</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Присвоєння =</td>
+        <td>З права наліво</td>
+        <td>let variable = 10;</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
