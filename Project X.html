@@ -2,10 +2,15 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Форма студента</title>
+  <title>Пошук по віку</title>
 </head>
 <body>
-  <h1>Додати студента</h1>
+  <h2>Введи вік:</h2>
+
+  <input type="number" id="ageInput" placeholder="Вік">
+  <button onclick="findNameByAge()">Знайти</button>
+
+  <p id="result"></p>
 
   <script src="test.js"></script>
 </body>
