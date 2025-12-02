@@ -227,39 +227,26 @@ function lowProgres () {
     
     for(let i = 0; i < students.length; i++){
         if (students[i].progres < 50 && students[i].course === "Back-end"){
-            students.splice(i, 1);
-            i--;
+            delete students[i];
         }
-        return console.log(students)
+        
     }
-    
-
-    // let sum = 0;
-
-    // for (let i = 0; i < students.length; i++){
-    //     if (students[i].course === "Back-end"){
-    //         sum++
-    //     }
-    // }
-    // sum < 5 ? students.push(newStudent) : sum = "Группа заповнена";
-    // return sum;
-    
 }
 
-// console.log(lowProgres(students));
+console.log(lowProgres(students));
 
 
-function validator (str){
-    let reg = /^[a-zA-Z\s]+$/;
-    let txt = [];
+// function validator (str){
+//     let reg = /^[a-zA-Z\s]+$/;
+//     let txt = [];
 
-    if (reg.test(str)){
-        txt.push(str);
-        console.log(txt)
-    }else{
-        console.log("Текст не валідний")
-    }
+//     if (reg.test(str)){
+//         txt.push(str);
+//         console.log(txt)
+//     }else{
+//         console.log("Текст не валідний")
+//     }
     
-}
+// }
 
-validator("Hellow World")
+// validator("Hellow World")
